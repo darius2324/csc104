@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="build.css" rel="stylesheet" type="text/css"/>
+    <script src = "build.js"></script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildingUAT</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <button onclick="changer()">Change color</button>
+</div>
+    <script type="text/javascript">
+        function changer(){
+            var symbols,color;
+            symbols = "0123456789ABCDEF";
+
+             color = "#";
+             for(var i =0;i<6;i++){
+                color = color + symbols[Math.floor(Math.random()* 16)];
+             }
+             document.body.style.background = color;
+             document.getElementById("hex").innerHTML = color;
+        }
+        </script>
+
+
+        <//id for the clock//>
+    <h1 id="clock"></h1>
+        
+
+    <script> //i did script becuse js wasnt working for me//
+        let time = document.getElementById("clock");
+        //setInterval for the live time//
+        setInterval(()=>{
+            let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+        },1000)
+       
+
+    </script>
+
+    <button onclick="play()"> <span class="material-symbols-outlined">
+        casino
+        </span></button>
+      
+            </span></button>
+         
+        <br>
+        <div id = "die1">Die1=</div>
+        <div id = "die2">Die2=</div>
+        <div id = "sum">Sum=</div>
+        <div id = "final">Final=</div>
+
+        <button onclick="nba()"><span class="material-symbols-outlined">
+            sports_basketball
+            </span></button>
+        <div id="randnba">Random number to match NBA player</div>
+        <img src="NBA.jpeg">
+        <br>
+
+         <button onclick="rap()"><span class="material-symbols-outlined">
+        mic
+        </span></button>
+        
+        <div id="rapname">Get a random number for your rap name </div> 
+     
+        
+        <img src="rapname.jpg">     
+      
+</body>
+</html>
